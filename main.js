@@ -5,6 +5,7 @@ const slider = document.querySelector(".slider");
 const progress = document.querySelector(".progress");
 const thumb = document.querySelector(".slider-thumb");
 const allNum = document.querySelectorAll(".num");
+const ball = document.querySelector(".ball");
 
 // Functions
 const sliderFunc = (e) => {
@@ -18,6 +19,8 @@ const sliderFunc = (e) => {
       num.classList.remove("active");
     }
   });
+
+  ball.style.left = val + "%";
 
   progress.style.width = val + "%";
   thumb.style.left = val + "%";
